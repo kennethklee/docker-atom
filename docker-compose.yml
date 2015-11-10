@@ -1,0 +1,8 @@
+ide:
+  build: .
+  volumes:
+    - /dev/shm:/dev/shm
+    - /tmp/.X11-unix:/tmp/.X11-unix
+    - ~/.ssh:/home/atom/.ssh
+  environment:
+    - DISPLAY=unix:0
