@@ -26,9 +26,6 @@ ENV ATOM_VERSION 1.0.19
 
 RUN curl -sSL https://github.com/atom/atom/releases/download/v${ATOM_VERSION}/atom-amd64.deb -o /tmp/atom-amd64.deb \
   && dpkg -i /tmp/atom-amd64.deb \
-  && rm -rf /tmp/atom-amd64.deb \
-  && useradd -d /home/atom -m atom
-
-USER atom
+  && rm -rf /tmp/atom-amd64.deb
 
 CMD ["/usr/bin/atom","-f"]
