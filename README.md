@@ -9,7 +9,7 @@ Usage
 -----
 
 ```shell
-xhost +
+xhost + # Allow X11 to display from docker
 
 docker run -d --name atom \
   -v /tmp/.X11-unix/:/tmp/.X11-unix/ \
@@ -18,5 +18,5 @@ docker run -d --name atom \
   -e DISPLAY=unix${DISPLAY} \
   kennethkl/atom
 
-xhost -
+xhost - # Disallow X11 from docker
 ```
